@@ -80,7 +80,7 @@
             </thead>
             <tbody>
                 <?php
-                if (isset($_POST['kirim'])){
+                if (isset($_POST['kirim'])) {
                     $customer = $_POST['customer'];
                     $produk = $_POST['pilih_produk'];
                     $jumlah = $_POST['jumlah'];
@@ -96,19 +96,18 @@
                     else  {
                         $harga = 0;
                     }
-                    $total_harga = $harga * $jumlah 
-                    ?>
-                <tr>
+                    $total_harga = $harga * $jumlah
+                }
+                ?>
+
+                    <tr>
                     <td><?= $customer ?></td>
                     <td><?= $produk ?></td>
                     <td><?= $jumlah ?></td>
-                    <td><?= number_format($total_harga, 1); ?></td>
+                    <td><?= number_format($total_harga); ?></td>
                 </tr>
-            <?php
-                }
-            ?>
+                
             </tbody>
-
 </body>
 
-</html>
+</html> 
